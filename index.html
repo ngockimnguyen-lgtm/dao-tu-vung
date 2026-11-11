@@ -198,11 +198,60 @@ select.topic{width:100%;padding:10px 12px;border-radius:12px;border:2px solid va
 .set{display:grid;gap:12px}
 .set label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
 .set .help{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.5}
-.set input[type=number],.set input[type=url],.set select{width:100%;padding:11px 12px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:15px}
+.set input[type=text],.set input[type=number],.set input[type=url],.set select{width:100%;padding:11px 12px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:15px}
 .switch{display:flex;align-items:center;gap:10px;font-weight:600}
 .switch input{width:20px;height:20px;accent-color:var(--accent)}
 .row-btns{display:flex;gap:8px;flex-wrap:wrap}
 .row-btns .btn{width:auto;flex:1}
+
+
+/* ---------- Thúc đẩy ---------- */
+.mode.hot{background:#3b25a0;border-color:#24146e;box-shadow:0 4px 0 #24146e;color:#fff}
+.mode.hot small{color:#d9d0ff}
+.mode.hot:active{box-shadow:0 1px 0 #24146e}
+.quest{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line)}
+.quest:last-of-type{border-bottom:0}
+.quest .qi{font-size:20px;width:28px;text-align:center;flex:none}
+.quest .qt{font-weight:600;font-size:14px}
+.quest .qb{height:8px;border-radius:9px;background:#efe4cc;overflow:hidden;margin-top:5px}
+.quest .qb i{display:block;height:100%;background:var(--good);border-radius:9px;transition:width .4s}
+.quest .qn{font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
+.quest.done .qt{color:var(--muted);text-decoration:line-through}
+.lg-note{margin:10px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
+.lg-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.lg-badge{font-size:32px;line-height:1}
+.lg-head b{font-family:'Baloo 2';font-size:21px;display:block;line-height:1.1}
+.lg-head small{color:var(--muted);font-size:12px}
+.lg-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:10px;font-size:14px}
+.lg-row .r{width:20px;font-weight:800;color:var(--muted);text-align:right;flex:none}
+.lg-row .av{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#f3ead8;font-size:16px;flex:none}
+.lg-row .nm{flex:1;font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lg-row .xp{font-weight:700;white-space:nowrap}
+.lg-row.me{background:#fff1c2;box-shadow:inset 0 0 0 2px #f5b81c}
+.lg-row.up .r{color:var(--good)} .lg-row.down .r{color:var(--bad)}
+.lg-sep{font-size:11px;font-weight:700;padding:2px 8px;color:var(--good);border-top:1px dashed #9fd8b5;margin:2px 0}
+.lg-sep.down{color:var(--bad);border-color:#f3b2b4}
+#blitz{background:radial-gradient(120% 80% at 50% 0%,#5a3fd1 0%,#2d1b69 60%,#1a0f45 100%);overflow-y:auto}
+.bz-wrap{max-width:560px;margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 16px 28px;color:#fff}
+.bz-top{display:flex;align-items:center;gap:10px}
+.bz-top .icon-btn{background:rgba(255,255,255,.15)}
+.bz-score{flex:1;text-align:center}
+.bz-score b{font-family:'Baloo 2';font-size:42px;line-height:1;display:block}
+.bz-score span{font-size:12px;opacity:.8}
+.bz-mult{font-family:'Baloo 2';font-size:24px;background:#ffd45c;color:#5a3a00;border-radius:12px;padding:2px 12px;min-width:58px;text-align:center}
+.bz-mult.pop{animation:pop .35s}
+@keyframes pop{50%{transform:scale(1.45) rotate(-6deg)}}
+.bz-timebar{height:14px;border-radius:99px;background:rgba(255,255,255,.15);overflow:hidden;margin:14px 0 4px}
+.bz-timebar i{display:block;height:100%;background:linear-gradient(90deg,#3ee08f,#ffd45c);border-radius:99px}
+.bz-timebar.low i{background:#ff5a5f;animation:blink .45s infinite alternate}
+@keyframes blink{to{opacity:.5}}
+.bz-time{text-align:center;font-family:'Baloo 2';font-size:24px;margin-bottom:10px}
+.bz-time.low{color:#ff8a8d;animation:blink .45s infinite alternate}
+.bz-ch{background:rgba(255,255,255,.12);border-radius:12px;padding:8px 12px;font-size:13px;margin-bottom:10px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.bz-card{color:var(--ink);min-height:300px}
+.bz-count{font-family:'Baloo 2';font-size:110px;text-align:center;line-height:280px;color:var(--violet)}
+.bz-float{position:fixed;left:50%;top:24%;transform:translateX(-50%);font-family:'Baloo 2';font-size:38px;pointer-events:none;opacity:0;text-shadow:0 3px 0 rgba(0,0,0,.35);z-index:5;white-space:nowrap}
+.bz-float.show{animation:dmg .8s}
 
 /* ---------- Summary / Toast ---------- */
 .sum-big{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin:12px 0 16px}
@@ -243,12 +292,20 @@ select.topic{width:100%;padding:10px 12px;border-radius:12px;border:2px solid va
         </div>
         <button class="btn primary" id="goWorld">🗺️ Ra đảo khám phá</button>
         <div class="grid2">
+          <button class="btn mode hot" id="goBlitz"><span class="em">⏱️</span>Bão từ 60s<small id="blitzSub">đua với đồng hồ</small></button>
+          <button class="btn mode" id="goChallenge"><span class="em">⚔️</span>Thách bạn bè<small>gửi link qua Zalo</small></button>
           <button class="btn mode" id="goRush"><span class="em">🏃</span>Đường đua<small id="rushSub">ôn bằng cách chạy qua cổng</small></button>
           <button class="btn mode" id="goQuick"><span class="em">⚡</span>Ôn nhanh<small id="quickSub">hỏi liền, không cần đi</small></button>
           <button class="btn mode" id="goHard"><span class="em">🧨</span>Từ khó<small id="hardSub">từ hay quên</small></button>
           <button class="btn mode" id="goBook"><span class="em">📖</span>Sổ từ<small id="bookSub">tra và nghe lại</small></button>
         </div>
       </div>
+
+      <div class="section-title"><span>🎯 Nhiệm vụ hôm nay</span><span id="qTimer" style="font-weight:600"></span></div>
+      <div class="card" id="quests"></div>
+
+      <div class="section-title"><span>🏆 Giải đấu tuần</span><span id="lgTimer" style="font-weight:600"></span></div>
+      <div class="card" id="league"></div>
 
       <div class="section-title"><span>Lịch ôn 7 ngày tới</span><span id="hNextDue" style="font-weight:500;opacity:.85"></span></div>
       <div class="card"><div class="forecast" id="forecast"></div></div>
@@ -311,6 +368,18 @@ select.topic{width:100%;padding:10px 12px;border-radius:12px;border:2px solid va
     <div class="hint" id="rHint">← → hoặc chạm vào làn để đổi làn · giữ ↑ / Space để chạy nhanh</div>
   </section>
 
+  <!-- ============ BLITZ ============ -->
+  <section id="blitz" class="screen">
+    <div class="bz-wrap">
+      <div class="bz-top"><button class="icon-btn" data-home aria-label="Về trạm">🏠</button><div class="bz-score"><b id="bzScore">0</b><span>điểm</span></div><div class="bz-mult" id="bzMult">x1</div></div>
+      <div class="bz-timebar"><i id="bzBar"></i></div>
+      <div class="bz-time" id="bzTime">60.0</div>
+      <div class="bz-ch" id="bzCh"></div>
+      <div class="card bz-card" id="bzCard"></div>
+    </div>
+    <div class="bz-float" id="bzFloat"></div>
+  </section>
+
   <!-- ============ BOOK ============ -->
   <section id="book" class="screen">
     <div class="page">
@@ -328,6 +397,10 @@ select.topic{width:100%;padding:10px 12px;border-radius:12px;border:2px solid va
     <div class="page">
       <div class="page-head"><button class="icon-btn" data-home aria-label="Về trạm">←</button><h2>⚙️ Cài đặt</h2></div>
       <div class="set">
+        <div class="card">
+          <label for="sName">Tên của bạn</label>
+          <input type="text" id="sName" maxlength="24" placeholder="Hiện trong bảng giải đấu và link thách đấu">
+        </div>
         <div class="card">
           <label for="sNewPerDay">Số trứng từ mới mỗi ngày</label>
           <input type="number" id="sNewPerDay" min="1" max="30">
@@ -408,19 +481,21 @@ function saveP() { try { localStorage.setItem(LS_P, JSON.stringify(P)); } catch 
 function dayKey(t = Date.now()) { const d = new Date(t); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
 function startOfDay(t = Date.now()) { const d = new Date(t); d.setHours(0, 0, 0, 0); return d.getTime(); }
 function rollDaily() { const k = dayKey(); if (P.daily.date !== k) { P.daily = { date: k, new: 0, answers: 0, correct: 0 }; saveP(); } }
-function streakNow() { const k = dayKey(), y = dayKey(Date.now() - DAY); return (P.streak.last === k || P.streak.last === y) ? P.streak.count : 0; }
+function streakNow() { const k = dayKey(), y = dayKey(Date.now() - DAY), y2 = dayKey(Date.now() - 2 * DAY); return (P.streak.last === k || P.streak.last === y || (P.streak.last === y2 && (P.freeze || 0) > 0)) ? P.streak.count : 0; }
 function noteAnswer(ok) {
   rollDaily(); P.daily.answers++; if (ok) P.daily.correct++;
   const k = dayKey();
   if (P.daily.answers >= 5 && P.streak.last !== k) {
-    P.streak.count = P.streak.last === dayKey(Date.now() - DAY) ? P.streak.count + 1 : 1;
+    if (P.streak.last === dayKey(Date.now() - DAY)) P.streak.count++;
+    else if (P.streak.last === dayKey(Date.now() - 2 * DAY) && (P.freeze || 0) > 0) { P.freeze--; P.streak.count++; toast('🧊 Đã dùng 1 băng để cứu chuỗi hôm qua'); }
+    else P.streak.count = 1;
     P.streak.last = k; toast('🔥 Giữ chuỗi ' + P.streak.count + ' ngày!');
   }
-  saveP();
+  saveP(); if (typeof checkQuests === 'function') checkQuests();
 }
 const level = () => Math.floor(Math.sqrt(P.xp / 40)) + 1;
 const levelXp = l => 40 * (l - 1) * (l - 1);
-function addXP(n) { const b = level(); P.xp += n; if (level() > b) toast('🎉 Lên cấp ' + level() + '!'); }
+function addXP(n) { const b = level(); P.xp += n; if (typeof ensureLeague === 'function') ensureLeague().xp += n; if (level() > b) toast('🎉 Lên cấp ' + level() + '!'); }
 
 /* ---------------- Lịch ôn ngắt quãng ---------------- */
 function dueInDays(d) { const f = d >= 7 ? Math.round((Math.random() * 0.2 - 0.1) * d) : 0; return startOfDay() + (d + f) * DAY + 2 * HOUR; }
@@ -700,6 +775,7 @@ const Battle = {
       xp = ok ? (grade === 'easy' ? 10 : 6) + (this.q.type === 'type' ? 3 : 0) : 1;
       if (!wasDue && ok) xp = 2;
     }
+    if (ok && this.q.type === 'type') dinc('typedOk');
     addXP(xp); noteAnswer(ok); this.stats.n++; if (ok) this.stats.ok++; this.stats.xp += xp;
     beep(ok);
     const crt = $('#bCrt'); crt.classList.remove('hit', 'flee', 'caught'); void crt.offsetWidth;
@@ -738,7 +814,7 @@ function show(id) {
   if (canSpeak() && id !== 'rush') speechSynthesis.cancel();
   resize();
 }
-document.addEventListener('click', e => { if (e.target.closest('[data-home]')) { if (SCREEN === 'rush' && R.active) endRush(true); else show('home'); } });
+document.addEventListener('click', e => { if (e.target.closest('[data-home]')) { if (SCREEN === 'rush' && R.active) endRush(true); else if (SCREEN === 'blitz') endBlitz(true); else show('home'); } });
 function toast(msg) { const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; $('#toasts').appendChild(t); setTimeout(() => t.remove(), 2600); }
 function showSummary(title, s, again) {
   const pct = s.n ? Math.round(s.ok / s.n * 100) : 0;
@@ -758,7 +834,8 @@ function showTutorial() {
       <li><b>🥚 Trứng</b> là từ chưa học. Đi tới chạm vào để mở thẻ, đọc kỹ rồi trả lời 1 câu để bắt. Mỗi ngày có ${P.settings.newPerDay} lượt trứng.</li>
       <li><b>❗ Từ linh đến hạn</b> phải ôn: trả lời đúng thì nó ngủ lâu hơn (10 phút → 1 → 3 → 7 → 14 → 30 → 60 ngày). Sai thì nó tỉnh lại sau 10 phút và lùi 2 bậc.</li>
       <li>Câu hỏi khó dần theo độ thuộc: chọn nghĩa → nghe → điền chỗ trống → đồng nghĩa → tự gõ lại từ.</li>
-      <li>Lười đi bộ thì vào <b>⚡ Ôn nhanh</b>, muốn vận động tay thì chơi <b>🏃 Đường đua</b>. Ôn đủ 5 câu mỗi ngày để giữ chuỗi 🔥.</li>
+      <li>Muốn gấp rút thì chơi <b>⏱️ Bão từ 60 giây</b> rồi gửi link <b>⚔️ thách bạn bè</b>. Mỗi tuần đua XP với 9 đối thủ trong <b>🏆 giải đấu</b>, top 3 lên giải.</li>
+      <li>Làm 3 <b>nhiệm vụ hôm nay</b> trước nửa đêm để mở rương. Ôn đủ 5 câu mỗi ngày để giữ chuỗi 🔥.</li>
     </ol></div><button class="btn primary" id="tutOk">Bắt đầu thôi!</button>`;
   $('#sumModal').classList.remove('hidden');
   $('#tutOk').onclick = () => { $('#sumModal').classList.add('hidden'); P.seenTut = true; saveP(); };
@@ -791,6 +868,7 @@ function refreshHome() {
   const at = DATA_AT ? new Date(DATA_AT) : null, atTxt = at && !isNaN(at) ? (String(at.getHours()).padStart(2, '0') + ':' + String(at.getMinutes()).padStart(2, '0') + ' ngày ' + at.getDate() + '/' + (at.getMonth() + 1)) : '';
   $('#foot').innerHTML = `${ITEMS.length} từ và cụm từ sheet “Sổ từ vựng từ tài liệu”${atTxt ? ' · cập nhật ' + esc(atTxt) : ''}<br>${syncUrl() ? 'Tự đồng bộ mỗi lần mở app · <button id="footSync">Đồng bộ ngay</button>' : '<button id="footSync">Cài đồng bộ</button>'}`;
   $('#footSync').onclick = () => syncUrl() ? syncNow() : show('settings');
+  renderMotivation();
 }
 $('#goWorld').onclick = () => show('world');
 $('#goQuick').onclick = () => { const d = shuffle(dueItems()); if (d.length) Battle.start(d, { title: 'Ôn nhanh', again: () => $('#goQuick').click() }); };
@@ -952,6 +1030,7 @@ const KEYS = new Set();
 addEventListener('keydown', e => {
   if (e.target.tagName === 'INPUT') return;
   const k = e.key.toLowerCase(); KEYS.add(k);
+  if (SCREEN === 'blitz') { if (/^[1-4]$/.test(k)) blitzAnswer(+k - 1); return; }
   if (Battle.open) {
     if (Battle.phase === 'q' && Battle.q && Battle.q.options && /^[1-4]$/.test(k)) Battle.choose(+k - 1);
     else if ((Battle.phase === 'res' && (k === 'enter' || k === ' '))) { e.preventDefault(); $('#bNext').click(); }
@@ -1174,7 +1253,7 @@ function rushRoad(cssW) { const w = Math.min(cssW - 16, 560); return { x: (cssW 
 function judgeRush() {
   const g = R.gate, it = g.it, ok = g.opts[R.lane].right; g.judged = { ok, lane: R.lane };
   R.n++; let xp = 0;
-  if (ok) { R.ok++; R.combo++; R.best = Math.max(R.best, R.combo); xp = 4 + Math.min(R.combo, 6); for (let i = 0; i < 18; i++) R.parts.push({ x: 0, y: 0, vx: (Math.random() - 0.5) * 260, vy: -Math.random() * 260 - 60, life: 0.8, col: ['#ffd45c', '#22a35a', '#fff', '#ff7a3d'][i % 4] }); }
+  if (ok) { R.ok++; R.combo++; R.best = Math.max(R.best, R.combo); dmax('rushCombo', R.combo); xp = 4 + Math.min(R.combo, 6); for (let i = 0; i < 18; i++) R.parts.push({ x: 0, y: 0, vx: (Math.random() - 0.5) * 260, vy: -Math.random() * 260 - 60, life: 0.8, col: ['#ffd45c', '#22a35a', '#fff', '#ff7a3d'][i % 4] }); }
   else { R.combo = 0; R.shake = 0.35; xp = 1; }
   if (R.mode === 'review') schedule(it, ok ? 'good' : 'again');
   else if (!ok) { const c = P.cards[it.id]; c.lapses = (c.lapses || 0) + 1; c.step = Math.max(0, c.step - 1); c.due = Date.now() + 10 * MIN; }
@@ -1268,10 +1347,11 @@ $('#bList').onclick = e => { const r = e.target.closest('.row'); if (!r || e.tar
    CÀI ĐẶT
    ========================================================= */
 function renderSettings() {
-  $('#sNewPerDay').value = P.settings.newPerDay; $('#sAuto').checked = P.settings.autoSpeak; $('#sVoice').value = P.settings.voice; $('#sSync').value = P.settings.syncUrl; $('#sSync').placeholder = DEFAULT_SYNC || 'https://script.google.com/macros/s/.../exec';
+  $('#sName').value = P.settings.name || ''; $('#sNewPerDay').value = P.settings.newPerDay; $('#sAuto').checked = P.settings.autoSpeak; $('#sVoice').value = P.settings.voice; $('#sSync').value = P.settings.syncUrl; $('#sSync').placeholder = DEFAULT_SYNC || 'https://script.google.com/macros/s/.../exec';
   $('#sDataInfo').textContent = 'Đang dùng ' + ITEMS.length + ' mục, cập nhật ' + (DATA_AT || '').slice(0, 10) + '.';
 }
 $('#sNewPerDay').onchange = e => { P.settings.newPerDay = clamp(parseInt(e.target.value) || 8, 1, 30); saveP(); renderSettings(); };
+$('#sName').onchange = e => { P.settings.name = e.target.value.trim().slice(0, 24); saveP(); };
 $('#sAuto').onchange = e => { P.settings.autoSpeak = e.target.checked; saveP(); };
 $('#sVoice').onchange = e => { P.settings.voice = e.target.value; saveP(); sayText('Hello, this is how I sound.'); };
 $('#sSync').onchange = e => { P.settings.syncUrl = e.target.value.trim(); saveP(); };
@@ -1283,17 +1363,305 @@ $('#sReset').onclick = () => { if (confirm('Xoá toàn bộ tiến độ học t
 $('#sTut').onclick = () => showTutorial();
 
 /* =========================================================
+   THÚC ĐẨY: Bão từ 60 giây, thách đấu, giải đấu tuần, nhiệm vụ ngày
+   ========================================================= */
+function hashStr(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+function withRng(rng, fn) { const old = Math.random; Math.random = rng; try { return fn(); } finally { Math.random = old; } }
+const myName = () => (P.settings.name || '').trim();
+function dget(k) { rollDaily(); return P.daily[k] || 0; }
+function dmax(k, v) { rollDaily(); P.daily[k] = Math.max(P.daily[k] || 0, v); }
+function dinc(k, n = 1) { rollDaily(); P.daily[k] = (P.daily[k] || 0) + n; }
+function leftText(ms) { ms = Math.max(0, ms); const d = Math.floor(ms / DAY), h = Math.floor(ms % DAY / HOUR), m = Math.floor(ms % HOUR / MIN), s = Math.floor(ms % MIN / 1000); return d ? `${d} ngày ${h} giờ` : h ? `${h} giờ ${m} phút` : `${m} phút ${s} giây`; }
+function clock(ms) { ms = Math.max(0, ms); const h = Math.floor(ms / HOUR), m = Math.floor(ms % HOUR / MIN), s = Math.floor(ms % MIN / 1000); return h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0'); }
+function beepTick(hi) {
+  try { AC = AC || new (window.AudioContext || window.webkitAudioContext)(); const o = AC.createOscillator(), g = AC.createGain(); o.connect(g); g.connect(AC.destination); const t = AC.currentTime; o.frequency.value = hi ? 1250 : 820; g.gain.setValueAtTime(0.06, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.08); o.start(t); o.stop(t + 0.09); } catch (e) {}
+}
+
+/* ---- Bão từ 60 giây ---- */
+const BZ = { active: false, run: 0 }, BZ_TIME = 60000;
+const sortedItems = () => ITEMS.slice().sort((a, b) => a.id < b.id ? -1 : 1);
+function poolMask(pool) {
+  const ids = new Set(pool.map(i => i.id)), all = sortedItems(), bytes = new Uint8Array(Math.ceil(all.length / 8));
+  all.forEach((it, i) => { if (ids.has(it.id)) bytes[i >> 3] |= 1 << (i & 7); });
+  return btoa(String.fromCharCode(...bytes)).replace(/=+$/, '');
+}
+function poolFromMask(m) {
+  try { const s = atob(m + '='.repeat((4 - m.length % 4) % 4)), all = sortedItems(); return all.filter((it, i) => (s.charCodeAt(i >> 3) >> (i & 7)) & 1); } catch (e) { return []; }
+}
+function startBlitz(ch) {
+  const all = sortedItems(); let pool = all;
+  if (ch && ch.m) { const p = poolFromMask(ch.m); if (p.length >= 4) pool = p; }
+  else if (!ch) { const learned = all.filter(i => P.cards[i.id]); if (learned.length >= 8) pool = learned; }
+  const seed = ch ? ch.s : (Math.random() * 2147483647) | 0, rng = mulberry32(seed);
+  const order = withRng(rng, () => shuffle(pool));
+  Object.assign(BZ, { active: false, ch, seed, mask: poolMask(pool), rng, order, oi: 0, score: 0, streak: 0, mult: 1, n: 0, ok: 0, best: 0, wrong: [], q: null, lock: false, endAt: 0, run: BZ.run + 1 });
+  show('blitz');
+  $('#bzScore').textContent = '0'; $('#bzMult').textContent = 'x1'; $('#bzTime').textContent = '60.0'; $('#bzBar').style.width = '100%';
+  $('#bzTime').classList.remove('low'); $('.bz-timebar').classList.remove('low');
+  $('#bzCh').innerHTML = ch ? `<span>⚔️ Thách đấu của <b>${esc(ch.n)}</b></span><span>Cần vượt <b>${ch.p}</b> điểm</span>`
+    : `<span>🏅 Kỷ lục: <b>${(P.blitz && P.blitz.best) || 0}</b></span><span>Đúng +1 giây · Sai −3 giây</span>`;
+  let k = 3; const run = BZ.run, card = $('#bzCard'); card.innerHTML = `<div class="bz-count">${k}</div>`; beepTick(false);
+  const tick = setInterval(() => {
+    if (SCREEN !== 'blitz' || BZ.run !== run) { clearInterval(tick); return; }
+    k--; beepTick(k === 0);
+    if (k > 0) card.innerHTML = `<div class="bz-count">${k}</div>`;
+    else { clearInterval(tick); BZ.active = true; BZ.endAt = performance.now() + BZ_TIME; nextBlitz(); }
+  }, 700);
+}
+function blitzQ(it) {
+  const types = it.kind === 'struct' ? ['mean', 'rev'] : ['mean', 'rev', 'cloze', 'mean'];
+  if (it.kind === 'word' && it.syn.length) types.push('syn');
+  return makeQ(it, pick(types));
+}
+function nextBlitz() {
+  if (!BZ.active) return;
+  if (BZ.oi >= BZ.order.length) BZ.oi = 0;
+  const it = BZ.item = BZ.order[BZ.oi++]; const q = BZ.q = withRng(BZ.rng, () => blitzQ(it)); BZ.lock = false;
+  $('#bzCard').innerHTML = `<div class="q-kind">${esc(q.label)}</div><div class="q-prompt">${q.prompt.replace(/<button class="speak"[^>]*>🔊<\/button>/g, '')}</div>
+    <div class="opts" id="bzOpts">${q.options.map((o, i) => `<button class="opt" data-i="${i}"><span class="k">${i + 1}</span><span>${esc(o.label)}</span></button>`).join('')}</div>`;
+  $('#bzOpts').onclick = e => { const b = e.target.closest('.opt'); if (b) blitzAnswer(+b.dataset.i); };
+}
+function blitzAnswer(i) {
+  if (!BZ.active || BZ.lock || !BZ.q) return; BZ.lock = true;
+  const q = BZ.q, it = BZ.item, ok = q.options[i].right, box = $('#bzOpts');
+  box.classList.add('locked'); box.children[i].classList.add(ok ? 'right' : 'wrong');
+  if (!ok) q.options.forEach((o, j) => { if (o.right) box.children[j].classList.add('right'); });
+  BZ.n++; const fl = $('#bzFloat');
+  if (ok) {
+    BZ.ok++; BZ.streak++; const m = Math.min(5, 1 + Math.floor(BZ.streak / 3));
+    if (m > BZ.mult) { const mm = $('#bzMult'); mm.classList.remove('pop'); void mm.offsetWidth; mm.classList.add('pop'); }
+    BZ.mult = m; BZ.best = Math.max(BZ.best, BZ.streak); const pts = 10 * BZ.mult; BZ.score += pts; BZ.endAt += 1000;
+    fl.textContent = '+' + pts; fl.style.color = '#7dffb2';
+  } else { BZ.streak = 0; BZ.mult = 1; BZ.endAt -= 3000; BZ.wrong.push(it); fl.textContent = '−3 giây'; fl.style.color = '#ff8a8d'; }
+  fl.classList.remove('show'); void fl.offsetWidth; fl.classList.add('show');
+  $('#bzScore').textContent = BZ.score; $('#bzMult').textContent = 'x' + BZ.mult;
+  const c = P.cards[it.id];
+  if (c) { if (c.due <= Date.now()) schedule(it, ok ? 'good' : 'again'); else if (!ok) { c.lapses = (c.lapses || 0) + 1; c.step = Math.max(0, c.step - 1); c.due = Date.now() + 10 * MIN; } }
+  noteAnswer(ok); beep(ok);
+  const run = BZ.run; setTimeout(() => { if (BZ.run === run) nextBlitz(); }, ok ? 260 : 900);
+}
+let BZ_LAST_TICK = -1;
+function updateBlitz() {
+  if (!BZ.active) return;
+  const rem = BZ.endAt - performance.now();
+  if (rem <= 0) return endBlitz(false);
+  const s = rem / 1000, low = s < 10;
+  $('#bzTime').textContent = s.toFixed(1); $('#bzBar').style.width = clamp(rem / BZ_TIME * 100, 0, 100) + '%';
+  $('#bzTime').classList.toggle('low', low); $('.bz-timebar').classList.toggle('low', low);
+  const sec = Math.ceil(s); if (sec <= 5 && sec !== BZ_LAST_TICK) { BZ_LAST_TICK = sec; beepTick(false); }
+}
+function endBlitz(quit) {
+  const wasActive = BZ.active; BZ.active = false; BZ.run++; BZ_LAST_TICK = -1;
+  if (!wasActive) { if (quit) show('home'); return; }
+  if (quit && !BZ.n) { show('home'); return; }
+  const xp = Math.round(BZ.score / 5); addXP(xp);
+  P.blitz = P.blitz || { best: 0, runs: [] };
+  const rec = !quit && BZ.score > P.blitz.best;
+  if (!quit) {
+    P.blitz.runs.push({ score: BZ.score, at: Date.now(), seed: BZ.seed, mask: BZ.mask, ok: BZ.ok, n: BZ.n });
+    P.blitz.runs.sort((a, b) => b.score - a.score); P.blitz.runs = P.blitz.runs.slice(0, 10);
+    if (rec) P.blitz.best = BZ.score;
+    dmax('blitzBest', BZ.score); dinc('blitzRuns'); checkQuests();
+  }
+  saveP();
+  const pct = BZ.n ? Math.round(BZ.ok / BZ.n * 100) : 0, ch = BZ.ch;
+  let head = quit ? 'Dừng giữa chừng' : rec ? '🏆 Kỷ lục mới!' : '⏰ Hết giờ!', chLine = '';
+  if (ch && !quit) { const win = BZ.score > ch.p, tie = BZ.score === ch.p; head = win ? '🎉 Bạn thắng ' + ch.n + '!' : tie ? '🤝 Hoà với ' + ch.n : '😤 Thua ' + ch.n + ' rồi'; chLine = `<p style="text-align:center;margin:2px 0 10px;font-weight:600">${esc(ch.n)}: ${ch.p} điểm · Bạn: ${BZ.score} điểm</p>`; }
+  const wrong = [...new Map(BZ.wrong.map(i => [i.id, i])).values()].slice(0, 8);
+  $('#sumBody').innerHTML = `<h2 style="font-size:26px">${esc(head)}</h2>${chLine}
+    <div class="sum-big"><div><b>${BZ.score}</b><span>điểm</span></div><div><b>${BZ.ok}/${BZ.n}</b><span>đúng ${pct}%</span></div><div><b>+${xp}</b><span>XP</span></div></div>
+    <p style="text-align:center;margin:-6px 0 12px;font-weight:600">🔥 Đúng liên tiếp dài nhất: ${BZ.best} · Kỷ lục: ${P.blitz.best}</p>
+    ${wrong.length ? `<div class="detail"><b>Xem lại từ trả lời sai</b><ul class="d-ex" style="margin-top:6px">${wrong.map(i => `<li><b>${esc(i.term)}</b>: ${esc(shortMeaning(i.meaning))}</li>`).join('')}</ul></div>` : ''}
+    ${quit ? '' : `<button class="btn primary" id="bzShare">⚔️ Thách bạn bè vượt ${BZ.score} điểm</button>`}
+    <div class="row-btns" style="margin-top:10px"><button class="btn" id="bzAgain">Chơi lại</button><button class="btn" id="bzHome">Về trạm</button></div>`;
+  $('#sumModal').classList.remove('hidden');
+  const seed = BZ.seed, mask = BZ.mask, score = BZ.score;
+  if (!quit) $('#bzShare').onclick = () => shareChallenge(seed, mask, score);
+  $('#bzAgain').onclick = () => { $('#sumModal').classList.add('hidden'); startBlitz(ch ? Object.assign({}, ch) : null); };
+  $('#bzHome').onclick = () => { $('#sumModal').classList.add('hidden'); show('home'); };
+}
+
+/* ---- Thách đấu bạn bè bằng link ---- */
+function askName() {
+  if (myName()) return true;
+  const n = prompt('Tên của bạn (người nhận thách đấu sẽ thấy tên này):', '');
+  if (n && n.trim()) { P.settings.name = n.trim().slice(0, 24); saveP(); return true; }
+  return false;
+}
+function challengeUrl(seed, mask, score) {
+  const data = { s: seed, m: mask, p: score, n: myName() || 'Một người bạn', k: ITEMS.length };
+  const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(data)))).replace(/=+$/, '');
+  return location.origin + location.pathname + '?thach=' + encodeURIComponent(b64);
+}
+async function shareChallenge(seed, mask, score) {
+  askName();
+  const url = challengeUrl(seed, mask, score), text = `Mình được ${score} điểm Bão từ 60 giây ở Đảo Từ Vựng. Cùng bộ câu hỏi, bạn có vượt được không?`;
+  if (navigator.share) { try { await navigator.share({ title: 'Thách đấu Đảo Từ Vựng', text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
+  try { await navigator.clipboard.writeText(text + '\n' + url); toast('Đã copy link thách đấu, dán gửi bạn bè nhé'); } catch (e) { prompt('Copy link này gửi bạn bè:', url); }
+}
+function readChallenge() {
+  const m = location.search.match(/[?&]thach=([^&]+)/); if (!m) return null;
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  try {
+    const s = decodeURIComponent(m[1]); const j = JSON.parse(decodeURIComponent(escape(atob(s + '='.repeat((4 - s.length % 4) % 4)))));
+    if (typeof j.s !== 'number') return null;
+    return { s: j.s, m: String(j.m || ''), p: j.p | 0, n: String(j.n || 'Một người bạn').slice(0, 24), k: j.k | 0 };
+  } catch (e) { return null; }
+}
+function offerChallenge(ch) {
+  $('#sumBody').innerHTML = `<h2 style="font-size:26px">⚔️ ${esc(ch.n)} thách bạn!</h2>
+    <p style="line-height:1.6">${esc(ch.n)} được <b>${ch.p} điểm</b> ở <b>Bão từ 60 giây</b>. Bạn sẽ gặp đúng bộ câu hỏi đó. Đúng +1 giây, sai −3 giây, đúng liên tiếp thì điểm nhân tới x5.</p>
+    <div class="row-btns"><button class="btn primary" id="chGo">Nhận lời thách đấu</button><button class="btn" id="chNo">Để sau</button></div>`;
+  $('#sumModal').classList.remove('hidden');
+  $('#chNo').onclick = () => { $('#sumModal').classList.add('hidden'); if (!P.seenTut) showTutorial(); };
+  $('#chGo').onclick = async () => {
+    const b = $('#chGo'); b.disabled = true; b.textContent = 'Đang tải bộ từ...';
+    if (ch.k && ch.k !== ITEMS.length) await syncNow(true);
+    if (!P.seenTut) { P.seenTut = true; saveP(); }
+    $('#sumModal').classList.add('hidden'); startBlitz(ch);
+  };
+}
+function openChallengeMenu() {
+  const best = P.blitz && P.blitz.runs && P.blitz.runs[0];
+  $('#sumBody').innerHTML = `<h2 style="font-size:26px">⚔️ Thách bạn bè</h2>
+    <p style="line-height:1.6">Chơi 1 lượt <b>Bão từ 60 giây</b> rồi gửi link qua Zalo, Messenger... Bạn bè mở link sẽ gặp đúng bộ câu hỏi của bạn và phải vượt điểm của bạn. Không cần tài khoản.</p>
+    <label for="chName" style="font-weight:700;font-size:14px">Tên của bạn</label>
+    <input id="chName" class="search" style="margin:6px 0 12px" maxlength="24" placeholder="Ví dụ: Ngọc" value="${esc(myName())}">
+    <button class="btn primary" id="chPlay">⏱️ Chơi lượt mới để thách</button>
+    ${best ? `<button class="btn" id="chBest" style="margin-top:8px">Gửi luôn kỷ lục ${best.score} điểm</button>` : ''}
+    <button class="btn" id="chClose" style="margin-top:8px">Đóng</button>`;
+  $('#sumModal').classList.remove('hidden');
+  const saveName = () => { const v = $('#chName').value.trim(); if (v) { P.settings.name = v.slice(0, 24); saveP(); } };
+  $('#chPlay').onclick = () => { saveName(); $('#sumModal').classList.add('hidden'); startBlitz(null); };
+  if (best) $('#chBest').onclick = () => { saveName(); shareChallenge(best.seed, best.mask, best.score); };
+  $('#chClose').onclick = () => { saveName(); $('#sumModal').classList.add('hidden'); refreshHome(); };
+}
+
+/* ---- Giải đấu tuần ---- */
+const TIERS = [{ n: 'Đồng', e: '🥉', f: 0.8 }, { n: 'Bạc', e: '🥈', f: 1 }, { n: 'Vàng', e: '🥇', f: 1.25 }, { n: 'Bạch kim', e: '💠', f: 1.55 }, { n: 'Kim cương', e: '💎', f: 1.9 }];
+const BOTS = [['Mèo Mun', '🐈'], ['Cáo Lửa', '🦊'], ['Cú Đêm', '🦉'], ['Rùa Thần', '🐢'], ['Gấu Trúc', '🐼'], ['Sóc Nâu', '🐿️'], ['Cá Heo', '🐬'], ['Đại Bàng', '🦅'], ['Thỏ Ngọc', '🐰'], ['Hổ Con', '🐯'], ['Chim Sẻ', '🐦'], ['Kỳ Lân', '🦄'], ['Ếch Xanh', '🐸'], ['Bạch Tuộc', '🐙'], ['Cún Shiba', '🐕']];
+let LEAGUE_RESULT = null;
+function weekStart(t = Date.now()) { const d = new Date(t); d.setHours(0, 0, 0, 0); return d.getTime() - ((d.getDay() + 6) % 7) * DAY; }
+function ensureLeague() {
+  const ws = weekStart();
+  if (!P.league) P.league = { tier: 0, week: ws, xp: 0, base: 450, history: [], lastRank: 0 };
+  const L = P.league;
+  if (L.week !== ws) {
+    const table = leagueTable(true), rank = table.findIndex(r => r.me) + 1, old = L.tier, gap = Math.round((ws - L.week) / (7 * DAY));
+    if (rank <= 3 && L.xp > 0 && old < TIERS.length - 1) L.tier++; else if (rank >= 8 && old > 0) L.tier--;
+    if (gap > 1 && L.tier > 0) L.tier--;
+    L.history.unshift({ week: L.week, rank, xp: L.xp, tier: old }); L.history = L.history.slice(0, 12);
+    L.base = L.xp > 0 ? clamp(Math.round(L.xp * 0.95), 200, 5000) : Math.max(200, Math.round(L.base * 0.8));
+    LEAGUE_RESULT = { rank, old, tier: L.tier, xp: L.xp };
+    L.week = ws; L.xp = 0; L.lastRank = 0; saveP();
+  }
+  return L;
+}
+function botXp(i, at) {
+  const L = P.league, rng = mulberry32(hashStr(L.week + ':' + L.tier + ':' + i));
+  const skill = 0.45 + rng() * 1.15, target = L.base * TIERS[L.tier].f * skill;
+  const el = clamp((at - L.week) / HOUR, 0, 168), fl = Math.floor(el); let total = 0, acc = 0;
+  for (let h = 0; h < 168; h++) {
+    const hod = h % 24, r = rng(), r2 = rng(), w = hod >= 7 ? (r < 0.4 ? r2 * 3 : 0) : (r < 0.04 ? r2 : 0);
+    total += w; if (h < fl) acc += w; else if (h === fl) acc += w * (el - fl);
+  }
+  return Math.round(target * acc / (total || 1));
+}
+function leagueTable(final) {
+  const L = P.league, at = final ? L.week + 7 * DAY : Date.now();
+  const names = withRng(mulberry32(hashStr('ten' + L.week + ':' + L.tier)), () => shuffle(BOTS)).slice(0, 9);
+  const rows = names.map((b, i) => ({ name: b[0], av: b[1], xp: botXp(i, at) }));
+  rows.push({ name: myName() || 'Bạn', av: '😎', xp: L.xp, me: true });
+  return rows.sort((a, b) => b.xp - a.xp || (a.me ? -1 : b.me ? 1 : 0));
+}
+function renderLeague() {
+  const L = ensureLeague(), rows = leagueTable(false), me = rows.findIndex(r => r.me) + 1, T = TIERS[L.tier];
+  if (L.lastRank && me !== L.lastRank) {
+    if (me > L.lastRank) { const r = rows[me - 2]; toast(`${r.av} ${r.name} vừa vượt bạn, bạn tụt xuống hạng ${me}!`); }
+    else toast(`🚀 Bạn vừa lên hạng ${me} giải ${T.n}!`);
+  }
+  if (L.lastRank !== me) { L.lastRank = me; saveP(); }
+  $('#lgTimer').textContent = 'còn ' + leftText(L.week + 7 * DAY - Date.now());
+  const promo = L.tier < TIERS.length - 1, demo = L.tier > 0;
+  let h = `<div class="lg-head"><span class="lg-badge">${T.e}</span><div><b>Giải ${T.n}</b><small>${promo ? 'Top 3 lên giải ' + TIERS[L.tier + 1].n : 'Giải cao nhất, giữ top 3 để giữ ngôi'}${demo ? ' · 3 người cuối xuống giải ' + TIERS[L.tier - 1].n : ''}</small></div></div>`;
+  rows.forEach((r, i) => {
+    const cls = (r.me ? ' me' : '') + (i < 3 && promo ? ' up' : '') + (i >= 7 && demo ? ' down' : '');
+    h += `<div class="lg-row${cls}"><span class="r">${i + 1}</span><span class="av">${r.av}</span><span class="nm">${esc(r.name)}${r.me && myName() ? ' (bạn)' : ''}</span><span class="xp">${r.xp} XP</span></div>`;
+    if (i === 2 && promo) h += '<div class="lg-sep">▲ vùng lên giải</div>';
+    if (i === 6 && demo) h += '<div class="lg-sep down">▼ vùng xuống giải</div>';
+  });
+  const gap = me > 1 ? rows[me - 2].xp - rows[me - 1].xp + 1 : 0;
+  h += `<p class="lg-note">${me > 1 ? `Cần thêm <b>${gap} XP</b> để vượt ${esc(rows[me - 2].name)}. Một lượt Bão từ tốt được 40 đến 100 XP.` : 'Bạn đang dẫn đầu, giữ vững tới hết Chủ nhật!'}</p>`;
+  $('#league').innerHTML = h;
+}
+function showLeagueResult() {
+  if (!LEAGUE_RESULT) return false; const r = LEAGUE_RESULT; LEAGUE_RESULT = null;
+  const up = r.tier > r.old, down = r.tier < r.old, T = TIERS[r.tier];
+  $('#sumBody').innerHTML = `<h2 style="font-size:26px">${up ? '🎉 Lên giải ' + T.n + '!' : down ? '😢 Xuống giải ' + T.n : '🏆 Kết quả giải tuần'}</h2>
+    <p style="line-height:1.6;font-size:16px">Tuần trước bạn đứng <b>hạng ${r.rank}/10</b> giải ${TIERS[r.old].n} với <b>${r.xp} XP</b>. ${up ? 'Đối thủ tuần này sẽ mạnh hơn.' : down ? 'Tuần này lấy lại phong độ nhé!' : 'Tuần này vào top 3 để lên giải.'}</p>
+    <button class="btn primary" id="lgOk">Vào tuần mới</button>`;
+  $('#sumModal').classList.remove('hidden'); $('#lgOk').onclick = () => { $('#sumModal').classList.add('hidden'); refreshHome(); };
+  return true;
+}
+
+/* ---- Nhiệm vụ ngày ---- */
+const QUESTS = {
+  due: { t: 'Ôn sạch từ đến hạn hôm nay', e: '❗', need: 1, val: () => (dueItems().length === 0 && dget('answers') > 0 ? 1 : 0) },
+  ok20: { t: 'Trả lời đúng 20 câu', e: '✅', need: 20, val: () => dget('correct') },
+  new3: { t: 'Bắt 3 trứng từ mới', e: '🥚', need: 3, val: () => dget('new') },
+  type5: { t: 'Tự gõ đúng 5 từ', e: '⌨️', need: 5, val: () => dget('typedOk') },
+  blitz150: { t: 'Đạt 150 điểm Bão từ', e: '⏱️', need: 150, val: () => dget('blitzBest') },
+  combo8: { t: 'Combo 8 ở Đường đua', e: '🏃', need: 8, val: () => dget('rushCombo') },
+  blitz2: { t: 'Chơi 2 lượt Bão từ', e: '🌪️', need: 2, val: () => dget('blitzRuns') },
+};
+function todayQuests() {
+  rollDaily(); if (P.daily.quests) return P.daily.quests;
+  const hasCards = Object.keys(P.cards).length > 0, unseen = ITEMS.some(i => !P.cards[i.id]);
+  const first = hasCards ? 'due' : 'new3';
+  let rest = Object.keys(QUESTS).filter(k => k !== first && k !== 'due' && (k !== 'new3' || unseen) && (hasCards || (k !== 'type5' && k !== 'combo8')));
+  rest = withRng(mulberry32(hashStr(P.daily.date)), () => shuffle(rest));
+  P.daily.quests = [first, rest[0], rest[1]]; saveP(); return P.daily.quests;
+}
+function checkQuests() {
+  if (!ITEMS.length) return; const qs = todayQuests(); P.daily.qd = P.daily.qd || [];
+  qs.forEach(k => { const q = QUESTS[k]; if (q && q.val() >= q.need && !P.daily.qd.includes(k)) { P.daily.qd.push(k); toast('🎯 Xong nhiệm vụ: ' + q.t); } });
+  if (P.daily.qd.length === 3 && !P.daily.chestToast) { P.daily.chestToast = true; toast('🎁 Xong cả 3 nhiệm vụ, về trạm mở rương!'); }
+  saveP();
+}
+function renderQuests() {
+  const qs = todayQuests().map(k => Object.assign({ k }, QUESTS[k])), done = qs.filter(q => q.val() >= q.need).length;
+  let h = qs.map(q => { const v = Math.min(q.val(), q.need), ok = v >= q.need; return `<div class="quest${ok ? ' done' : ''}"><span class="qi">${ok ? '✅' : q.e}</span><div style="flex:1;min-width:0"><div class="qt">${q.t}</div><div class="qb"><i style="width:${v / q.need * 100}%"></i></div></div><span class="qn">${v}/${q.need}</span></div>`; }).join('');
+  if (P.daily.chest) h += `<p class="lg-note">🎁 Đã mở rương hôm nay. Băng giữ chuỗi đang có: ${P.freeze || 0} 🧊</p>`;
+  else if (done === 3) h += `<button class="btn primary" id="openChest" style="margin-top:10px">🎁 Mở rương thưởng</button>`;
+  else h += `<p class="lg-note">Xong cả 3 để mở rương: +60 XP và 1 băng giữ chuỗi 🧊 (đang có ${P.freeze || 0}). Băng tự cứu chuỗi nếu bạn lỡ quên 1 ngày.</p>`;
+  $('#quests').innerHTML = h;
+  const b = $('#openChest');
+  if (b) b.onclick = () => { P.daily.chest = true; P.freeze = Math.min(2, (P.freeze || 0) + 1); addXP(60); saveP(); beep(true); toast('🎁 +60 XP và 1 băng giữ chuỗi 🧊'); refreshHome(); };
+}
+function renderMotivation() {
+  try { renderQuests(); renderLeague(); } catch (e) { console.error(e); }
+  $('#qTimer').textContent = 'còn ' + clock(startOfDay() + DAY - Date.now());
+  $('#blitzSub').textContent = P.blitz && P.blitz.best ? 'kỷ lục ' + P.blitz.best + ' điểm' : 'đua với đồng hồ';
+}
+setInterval(() => { if (SCREEN === 'home' && !document.hidden) { $('#qTimer').textContent = 'còn ' + clock(startOfDay() + DAY - Date.now()); if (P.league) $('#lgTimer').textContent = 'còn ' + leftText(P.league.week + 7 * DAY - Date.now()); } }, 1000);
+$('#goBlitz').onclick = () => startBlitz(null);
+$('#goChallenge').onclick = () => openChallengeMenu();
+
+
+/* =========================================================
    VÒNG LẶP
    ========================================================= */
 let last = performance.now();
 function loop(now) {
   const dt = Math.min(0.05, (now - last) / 1000); last = now; const t = now / 1000;
   if (SCREEN === 'world' && W) { if (!Battle.open) updateWorld(dt, t); drawWorld(t); }
+  if (SCREEN === 'blitz') updateBlitz();
   if (SCREEN === 'rush') { if (!Battle.open && $('#sumModal').classList.contains('hidden')) updateRush(dt); drawRush(t); }
   requestAnimationFrame(loop);
 }
 initData(); rollDaily(); refreshHome(); resize(); requestAnimationFrame(loop);
-if (!P.seenTut) showTutorial();
+const CH = readChallenge();
+if (CH) offerChallenge(CH); else if (!P.seenTut) showTutorial(); else showLeagueResult();
 syncNow(true);
 // quay lại app: cập nhật số đến hạn, quá 2 phút thì lấy từ mới trong sheet
 document.addEventListener('visibilitychange', () => { if (!document.hidden) { rollDaily(); if (SCREEN === 'home') refreshHome(); refreshHUD(); if (Date.now() - LAST_SYNC > 2 * MIN) syncNow(true); } });
