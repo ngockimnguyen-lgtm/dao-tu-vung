@@ -1,6 +1,6 @@
 // Ưu tiên mạng: có mạng thì luôn lấy bản mới nhất (không cần cài lại),
 // mất mạng thì dùng bản đã lưu để vẫn chơi được.
-const CACHE = 'dao-tu-vung-v2';
+const CACHE = 'dao-tu-vung-v3';
 const FILES = ['./', './index.html', './data.js', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
